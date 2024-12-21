@@ -30,7 +30,7 @@ function Footer(){
             </div>
             <hr />
             <div className="footer-div1">
-                <p>©Copyright 2024 Designed and Develop by B-Sites</p>
+                <p>©Copyright 2024 Web Designed and Develop by B-Sites</p>
                 <a style={{color: 'white', textDecoration: 'none'}} href="http://www.freepik.com">Images Designed by Freepik</a>
             </div>
         </footer>

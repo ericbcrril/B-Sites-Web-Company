@@ -58,7 +58,9 @@ nav a:hover{
     scale: 1.05;
     animation: activeLink 1s ease-in-out infinite;
 }
-
+.btn-contactanos{
+    display: none;
+}
 nav button{
     all: unset;
     cursor: pointer;

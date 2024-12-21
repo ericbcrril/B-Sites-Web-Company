@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -31,7 +32,7 @@ html {
     background-color: rgb(40, 121, 125);
     color: white;
     padding: 10vh;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,7 +57,7 @@ html {
 main{
     display: flex;
     flex-direction: column;
-    background-image: url(../../images/resource/light_grey_dots_background.jpg);
+    background-image: url(../../images/resource/light_grey_dots_background.webp);
     background-repeat: repeat;
     background-size: 20%;
     align-items: center;
@@ -159,10 +160,9 @@ main{
 }
 
 /*Seccion Politicas*/
-.secN3{
-    
-}
 .secN3 section{
+    display: flex;
+    flex-direction: column;
     background-color: aliceblue;
     padding: 50px;
     margin: 50px;
@@ -170,9 +170,15 @@ main{
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
     font-family: monospace;
     font-size: 18px;
+    align-items: center;
+    justify-content: center;
 }
-.secN3 section h2{
-    
+
+.secN3 section a{
+    display: flex;
+    color: rgb(71, 68, 68);
+    text-decoration: none;
+    align-items: center;
 }
 
 @media (min-width: 1367px) {
@@ -315,10 +321,17 @@ main{
         width: 100%;
         overflow-x: scroll;/**/
     }
-    .secN1 img{
-        width: 1200px;/**/
-        align-self: flex-start;/**/
+    .img-ft-desk{
+        width: 400px;/**/
         margin: 20px;
+        display: none;
+    }
+    .img-ft-mobile{
+        display: block;
+        width: 90%;
+        margin: 0px;
+        height: fit-content;
+        border-radius: 20px;
     }
     
     .secN2{
@@ -357,6 +370,8 @@ main{
 
     .welcome-section{
         flex-direction: column-reverse;/**/
+        padding: 30px;
+        padding-top: 0px;
     }
     .ws0 img{
         width: 300px;
@@ -429,5 +444,33 @@ main{
         height: 80vh;
         width: 80vw;
         border: 1px solid black;
+    }
+}
+
+/*Otros*/
+@media (max-height: 550px) {
+    .ws0 img{
+        width: 180px;
+    }
+    .ws1{
+        width: 300px;
+    }
+    .secN0{
+        margin: 20px;
+        padding: 10px;
+    }
+    .secN0 div{
+        margin: 10px;
+    }
+    .secN0 img{
+        width: 250px;
+    }
+
+    .secN1 .img-ft-desk{
+        width: 680px;
+    }
+
+    #redes{
+        margin: 0px;
     }
 }

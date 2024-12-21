@@ -1,26 +1,17 @@
 //Inicio
-
+import { IoMdDownload } from "react-icons/io";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
+import ScreenSizes from "../scripts/getWinScreenSizes";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];
     const img = IFW[Math.floor(Math.random() * IFW.length)];
-
-    // Obtener las dimensiones de la pantalla
-    const screenWidth = window.screen.width;
-    const screenHeight = window.screen.height;
-    function screenSize(){
-        // Mostrar las dimensiones en la consola
-        console.log(`El ancho de tu pantalla es: ${screenWidth}px`);
-        console.log(`El alto de tu pantalla es: ${screenHeight}px`);
-    }
-    screenSize();
-
+   
     return(<>
-    
-    <p style={{display:"flex", position:"fixed", zIndex: 5, fontSize: 32, fontWeight: "bold", backgroundColor: "white"}}>{screenWidth}x{screenHeight}</p>
+
+    <ScreenSizes/>
 
     <Navbar/>
 
@@ -34,7 +25,7 @@ function Home(){
     
     <main>
         <section className="secN0" id="0">
-            <img src="/images/resource/4893415.jpg" alt="" />
+            <img src="/images/resource/4893415.webp" alt="" />
                 <div>
                     <h2>¿Quienes somos?</h2>
                     <p>Somos una empresa mexicana de tecnología, joven, dinámica y en constante crecimiento que
@@ -54,7 +45,7 @@ function Home(){
 
         <section className="secN2" id="2">
             <h2>Nuestros Paquetes</h2>
-            <p className="secN2-p">Obten una aproimacion del costo de tu proyecto.</p>
+            <p className="secN2-p">Obten una aproximacion del costo de tu proyecto.</p>
             <section>
                 <div className="paquete">
                     <div>
@@ -105,9 +96,11 @@ function Home(){
         <section className="secN3" id="3">
             <section>
                 <h2>Politicas</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deleniti dolorem placeat, 
-                    earum atque fugit ipsa velit harum distinctio totam facilis illo, consequuntur quis qui 
-                    autem est at. Placeat, corporis.</p>
+                <a href="/docs/Terminos y Condiciones.pdf" download="Terminos y Condiciones B-Sites">
+                    <IoMdDownload/>Descargar
+                </a>
+                <p>O</p>
+                <a href="https://drive.google.com/file/d/1f3_tjQXoW-sFxJhNpKr7UeYAD7pYSOkS/view?usp=sharing">Ver en Google docs</a>
             </section>
         </section>
     </main>

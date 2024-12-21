@@ -78,6 +78,11 @@ function Navbar() {
 
     return (
         <>
+        <button 
+                onClick={() =>  window.open(`https://wa.me/+523318435194`, '_blank')} 
+                style={{display: "none"}}
+                className="btn-contactanos"
+                >Contactanos</button>
             <nav>
                 <a href="#welcome" className={activeSection === "welcome" ? "active-link" : ""}>
                     <img src="images/logos/BSitesLogo00.webp" alt="Logo00" />
@@ -89,11 +94,6 @@ function Navbar() {
                 <button onClick={() => setVisible(!formVisible)}>Contactanos</button>
             </nav>
             <ContactForm />
-            <button 
-                onClick={() =>  window.open(`https://wa.me/+523318435194`, '_blank')} 
-                style={{display: "none"}}
-                className="btn-contactanos"
-                >Contactanos</button>
         </>
     );
 }
