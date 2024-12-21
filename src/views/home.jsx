@@ -3,7 +3,7 @@ import { IoMdDownload } from "react-icons/io";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-import ScreenSizes from "../scripts/getWinScreenSizes";
+//import ScreenSizes from "../scripts/getWinScreenSizes";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];
