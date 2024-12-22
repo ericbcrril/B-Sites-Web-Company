@@ -3,7 +3,7 @@ import { IoMdDownload } from "react-icons/io";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-import ScreenSizes from "../scripts/getWinScreenSizes";
+//import ScreenSizes from "../scripts/getWinScreenSizes";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];
@@ -64,7 +64,7 @@ function Home(){
                 <div className="paquete">
                     <div>
                         <h3>Web Estandar</h3>
-                        <h4>1500 MXN</h4>
+                        <h4>3500 MXN</h4>
                     </div>
                     <hr />
                     <p>🟢 Diseño para Celular, Tablets y Escritorio.</p>
@@ -78,7 +78,7 @@ function Home(){
                 <div className="paquete">
                     <div>
                         <h3>Web Avanzada</h3>
-                        <h4>1500 MXN</h4>
+                        <h4>4500 MXN</h4>
                     </div>
                     <hr />
                     <p>🟢 Diseño para Celular, Tablets y Escritorio.</p>
