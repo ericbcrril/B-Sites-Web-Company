@@ -17,12 +17,25 @@
       opacity: 1;
     }
 }
+@keyframes ApearLeft {
+    from {
+      opacity: 0.1;
+      transform: translateX(-400px); /* Inicia 400px más arriba */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Termina en su posición original */
+    }
+  }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 
 /*Portada*/
@@ -72,21 +85,36 @@ main{
     justify-content: center;
     font-family: monospace;
     /*border: 1px solid black;*/
-    padding: 10vh;
+    padding: 5vh;
     margin: 50px;
-    height: 80vh;
-    width: 80vw;
+    height: 100vh;
+    width: 90%;
 }
-/*#Seccion Bienvenido o ¿Quienes Somos?*/
+.sub-title-main{
+    color: rgb(71, 68, 68);
+    font-size: 32px;
+}
+
+/*#Seccion ¿Quienes Somos?*/
 .secN0{
     align-items: normal;
+    padding-top: 10%;
 }
-.secN0 img{
+.img-secN0 {
     width: 650px;
     margin: 50px;
     height: fit-content;
     border-radius: 20px;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateX(-100px); /* Desplazamiento inicial */
+    transition: all 0.5s ease-in-out;
 }
+
+.img-secN0.appear {
+    opacity: 1;
+    transform: translateX(0); /* Regresar a su posición original */
+}
+
 .secN0 div{
     margin: 50px;
     color: rgb(71, 68, 68);
@@ -95,9 +123,6 @@ main{
     background-color: rgba(255, 255, 255, .4);
     border-radius: 20px;
     height: fit-content;
-}
-.secN0 div h2{
-    color: rgb(36, 36, 36)
 }
 
 /*Seccion Nuestro Servicio*/
@@ -111,6 +136,13 @@ main{
     margin: 20px;
     height: fit-content;
     border-radius: 20px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+.img-ft-desk.appear{
+    opacity: 1;
+    transform: translateY(0);
 }
 .img-ft-mobile{
     display: none;
@@ -123,11 +155,7 @@ main{
 /*Seccion Paquetes*/
 .secN2{
     flex-direction: column;
-}
-.secN2 h2{
-    margin: 50px;
-    color: rgb(71, 68, 68);
-    font-size: 28px;
+    margin: 300px;
 }
 .secN2 p{
     font-size: 18px;
@@ -139,24 +167,41 @@ main{
     justify-content: space-around;
     margin: 20px;
 }
-.paquete{
+.paquete, .paqueteH{
     padding: 15px;
     border-radius: 10px;
     font-size: 18px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
     align-items: center;
     margin: 20px;
     text-wrap: nowrap;
     background-color: white;
     transition: scale 1s;
 }
-.paquete:hover{
-    scale: 1.1;
-}
-.paquete div{
+.paquete div, .paqueteH div{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.paquete{
+    border: .5px solid rgb(40, 121, 125);
+    box-shadow: 0 0 5px 0 rgb(40, 121, 125);
+}
+.paqueteH{
+    border: .5px solid #673de6;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
+}
+.btn-hostinger{
+    all: unset;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5%;
+    color: white;
+    background-color: #673de6;
+    transition: all .3s;
+}
+.btn-hostinger:hover{
+    background-color: #522fb9;
+    cursor: pointer;
 }
 
 /*Seccion Politicas*/
@@ -211,9 +256,10 @@ main{
         margin: -5px;/**/
     }
     
-    .secN2 h2{
+    .sub-title-main{
         margin: 20px;/**/
-        font-size: 18px;/**/
+        color: rgb(71, 68, 68);
+        font-size: 28px;
     }
     .secN2 p{
         font-size: 12px;/**/
@@ -221,7 +267,7 @@ main{
     .secN2 section{
         margin: 10px;/**/
     }
-    .paquete{
+    .paquete, .paqueteH{
         font-size: 12px;/**/
         margin: 5px 15px 5px 15px;/**/
     }
@@ -257,9 +303,9 @@ main{
         margin: -5px;/**/
     }
     
-    .secN2 h2{
-        margin: 20px;/**/
-        font-size: 18px;/**/
+    .sub-title-main{
+        color: rgb(71, 68, 68);
+        font-size: 28px;
     }
     .secN2 p{
         font-size: 12px;/**/
@@ -267,7 +313,7 @@ main{
     .secN2 section{
         margin: 10px;/**/
     }
-    .paquete{
+    .paquete, .paqueteH{
         font-size: 12px;/**/
         margin: 5px 15px 5px 15px;/**/
         text-wrap: initial;
@@ -309,8 +355,8 @@ main{
         margin: 20px;/**/
         font-size: 16px;/**/
     }
-    .secN0 div h2{
-        color: rgb(36, 36, 36)
+    .sub-title-main{
+        color: rgb(71, 68, 68);
     }
     
     .secN1{
@@ -339,7 +385,7 @@ main{
         margin: 20px;/**/
         height: fit-content;
     }
-    .secN2 h2{
+    .sub-title-main{
         text-wrap: nowrap;
     }
     .secN2 section{
@@ -347,7 +393,7 @@ main{
         margin: 20px;
         width: 100%;
     }
-    .paquete{
+    .paquete, .paqueteH{
         margin: 20px;
         text-wrap: initial;/**/
     }
@@ -397,8 +443,8 @@ main{
         margin: 20px;/**/
         font-size: 16px;/**/
     }
-    .secN0 div h2{
-        color: rgb(36, 36, 36)
+    .sub-title-main{
+        color: rgb(71, 68, 68);
     }
     
     .secN1{
@@ -423,7 +469,7 @@ main{
         margin: 20px;/**/
         height: fit-content;
     }
-    .secN2 h2{
+    .sub-title-main{
         text-wrap: nowrap;
     }
     .secN2 section{
@@ -431,7 +477,7 @@ main{
         margin: 20px;
         width: 100%;
     }
-    .paquete{
+    .paquete, .paqueteH{
         margin: 20px;
         text-wrap: initial;/**/
     }

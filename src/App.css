@@ -1,3 +1,29 @@
+
+*{
+ font-family: monospace; 
+}
+
+button{
+  all: unset;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(54, 29, 29);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  transition: scale .3s, background-color .5s;
+}
+
+button:active{
+  scale: .9;
+}
+
+button:hover{
+  background-color: rgb(54, 39, 39);
+  animation: pulse 0.5s ease-in infinite;
+}
+
+
 .App {
   text-align: center;
 }

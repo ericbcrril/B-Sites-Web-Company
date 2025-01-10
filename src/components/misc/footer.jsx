@@ -9,9 +9,10 @@ function Footer(){
 
                 <section >
                     <h2>Informacion</h2>
-                    <a href="#1" >Nosotros</a>
-                    <a href="#2" >Nuestro Servicio</a>
-                    <a href="#3" >Sección</a>
+                    <a href="#Nosotros" >Nosotros</a>
+                    <a href="#NuestroServicio" >Servicio</a>
+                    <a href="#Costos" >Precios</a>
+                    <a href="#Politicas" >Politicas</a>
                 </section>
                 
                 <section >

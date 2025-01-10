@@ -79,18 +79,18 @@ function Navbar() {
     return (
         <>
         <button 
-                onClick={() =>  window.open(`https://wa.me/+523318435194`, '_blank')} 
-                style={{display: "none"}}
+                onClick={() =>  window.open(`https://wa.me/+523318435194`)} 
                 className="btn-contactanos"
                 >Contactanos</button>
             <nav>
-                <a href="#welcome" className={activeSection === "welcome" ? "active-link" : ""}>
+                <a href="#Bienvenido" className={activeSection === "Bienvenido" ? "active-link" : ""}>
                     <img src="images/logos/BSitesLogo00.webp" alt="Logo00" />
                 </a>
-                <a href="#0" className={activeSection === "0" ? "active-link" : ""}>Bienvenido</a>
-                <a href="#1" className={activeSection === "1" ? "active-link" : ""}>Nuestro servicio</a>
-                <a href="#2" className={activeSection === "2" ? "active-link" : ""}>Paquetes</a>
-                <a href="#3" className={activeSection === "3" ? "active-link" : ""}>Politicas</a>
+                <a href="#Nosotros" className={activeSection === "Nosotros" ? "active-link" : ""}>Bienvenido</a>
+                <a href="#NuestroServicio" className={activeSection === "NuestroServicio" ? "active-link" : ""}>Nuestro servicio</a>
+                <a href="#Costos" className={activeSection === "Costos" ? "active-link" : ""}>Desarrollo web</a>
+                <a href="#Hostinger" className={activeSection === "Hostinger" ? "active-link" : ""}>Hosting Web</a>
+                <a href="#Politicas" className={activeSection === "Politicas" ? "active-link" : ""}>Politicas</a>
                 <button onClick={() => setVisible(!formVisible)}>Contactanos</button>
             </nav>
             <ContactForm />
