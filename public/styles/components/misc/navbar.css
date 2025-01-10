@@ -65,7 +65,7 @@ nav button{
     all: unset;
     cursor: pointer;
     color: white;
-    background-color: rgb(29, 19, 19);
+    background-color: rgb(54, 29, 29);
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
@@ -78,7 +78,7 @@ nav button:active{
 }
 
 nav button:hover{
-    background-color: rgb(44, 29, 29);
+    background-color: rgb(54, 39, 39);
     animation: pulse 0.5s ease-in infinite;
 }
 
