@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
 import ScreenSizes from "../scripts/getWinScreenSizes";
-import ChatBot from "../components/misc/chatBot";
+//import ChatBot from "../components/misc/chatBot";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];

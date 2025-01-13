@@ -81,7 +81,7 @@ function Navbar() {
         <button 
                 onClick={() =>  window.open(`https://wa.me/+523318435194`)} 
                 className="btn-contactanos"
-                >Contactanos</button>
+                ><FaWhatsapp/></button>
             <nav>
                 <a href="#Bienvenido" className={activeSection === "Bienvenido" ? "active-link" : ""}>
                     <img src="images/logos/BSitesLogo00.webp" alt="Logo00" />
