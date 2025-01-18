@@ -31,10 +31,11 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: monospace !important;
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
