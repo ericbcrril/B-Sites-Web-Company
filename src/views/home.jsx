@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
 import ScreenSizes from "../scripts/getWinScreenSizes";
+import { FaCheck, FaBan } from "react-icons/fa6";
+//import ChatBot from "../components/misc/chatBot";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];
@@ -50,7 +52,7 @@ function Home(){
 
     return(<>
 
-    <ScreenSizes/>
+ {/*<ScreenSizes/>*/}
 
     <Navbar/>
 
@@ -95,13 +97,13 @@ function Home(){
                         <h4>1500 MXN</h4>
                     </div>
                     <hr />
-                    <p>🟢 Diseño para Celular, Tablets y Escritorio</p>
-                    <p>🟢 3 Paginas de navegacion</p>
-                    <p>🟢 Integracion con tus redes sociales</p>
-                    <p>🔴 3 meses Host GRATIS</p>
-                    <p>🔴 5 Paginas de navegacion</p>
-                    <p>🔴 Paginas Ilimitadas</p>
-                    <p>🔴 Mensageria a tu WhatsApp y Email</p>
+                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio</p>
+                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion</p>
+                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales</p>
+                    <p><FaBan color="red" className="check-icon"/> 3 meses Host GRATIS</p>
+                    <p><FaBan color="red" className="check-icon"/> 5 Paginas de navegacion</p>
+                    <p><FaBan color="red" className="check-icon"/> Paginas Ilimitadas</p>
+                    <p><FaBan color="red" className="check-icon"/> Mensageria a tu WhatsApp y Email</p>
                     <div>
                         <button
                         onClick={() => handleSendWaM(0)}
@@ -114,13 +116,13 @@ function Home(){
                         <h4>3500 MXN</h4>
                     </div>
                     <hr />
-                    <p>🟢 Diseño para Celular, Tablets y Escritorio</p>
-                    <p>🟢 3 Paginas de navegacion</p>
-                    <p>🟢 Integracion con tus redes sociales</p>
-                    <p>🟢 3 meses Host GRATIS</p>
-                    <p>🟢 5 Paginas de navegacion</p>
-                    <p>🔴 Paginas Ilimitadas</p>
-                    <p>🔴 Mensageria a tu WhatsApp y Email</p>
+                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio</p>
+                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion</p>
+                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales</p>
+                    <p><FaCheck color="green" className="check-icon"/> 3 meses Host GRATIS</p>
+                    <p><FaCheck color="green" className="check-icon"/> 5 Paginas de navegacion</p>
+                    <p><FaBan color="red" className="check-icon"/> Paginas Ilimitadas</p>
+                    <p><FaBan color="red" className="check-icon"/> Mensageria a tu WhatsApp y Email</p>
                     <div>
                         <button
                         onClick={() => handleSendWaM(1)}
@@ -133,13 +135,13 @@ function Home(){
                         <h4>4500 MXN</h4>
                     </div>
                     <hr />
-                    <p>🟢 Diseño para Celular, Tablets y Escritorio.</p>
-                    <p>🟢 3 Paginas de navegacion.</p>
-                    <p>🟢 Integracion con tus redes sociales.</p>
-                    <p>🟢 3 meses Host GRATIS.</p>
-                    <p>🟢 5 Paginas de navegacion.</p>
-                    <p>🟢 Paginas Ilimitadas.</p>
-                    <p>🟢 Mensageria a tu WhatsApp y Email.</p>
+                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio.</p>
+                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion.</p>
+                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales.</p>
+                    <p><FaCheck color="green" className="check-icon"/> 3 meses Host GRATIS.</p>
+                    <p><FaCheck color="green" className="check-icon"/> 5 Paginas de navegacion.</p>
+                    <p><FaCheck color="green" className="check-icon"/> Paginas Ilimitadas.</p>
+                    <p><FaCheck color="green" className="check-icon"/> Mensageria a tu WhatsApp y Email.</p>
                     <div>
                         <button
                         onClick={() => handleSendWaM(2)}
@@ -159,10 +161,10 @@ function Home(){
                         <h4>59.99 MX$/mes</h4>
                     </div>
                     <hr />
-                    <p>🟢 100 Sitios web</p>
-                    <p>🟢 ~25,000 Visitas Mensuales</p>
-                    <p>🟢 100GB de almacenamiento NVMe</p>
-                    <p>🟢 400,000 Archivos y directorios (inodos)</p>
+                    <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
+                    <p><FaCheck color="green" className="check-icon"/> ~25,000 Visitas Mensuales</p>
+                    <p><FaCheck color="green" className="check-icon"/> 100GB de almacenamiento NVMe</p>
+                    <p><FaCheck color="green" className="check-icon"/> 400,000 Archivos y directorios (inodos)</p>
                     <div>
                         <a className="btn-hostinger" 
                             rel="noopener noreferrer"
@@ -177,10 +179,10 @@ function Home(){
                         <h4>79.99 MX$/mes</h4>
                     </div>
                     <hr />
-                    <p>🟢 100 Sitios web</p>
-                    <p>🟢 ~100,000 Visitas Mensuales</p>
-                    <p>🟢 200GB de almacenamiento NVMe</p>
-                    <p>🟢 600,000 Archivos y directorios (inodos)</p>
+                    <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
+                    <p><FaCheck color="green" className="check-icon"/> ~100,000 Visitas Mensuales</p>
+                    <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
+                    <p><FaCheck color="green" className="check-icon"/> 600,000 Archivos y directorios (inodos)</p>
                     <div>
                         <a className="btn-hostinger" 
                             rel="noopener noreferrer"
@@ -195,10 +197,10 @@ function Home(){
                         <h4>166.99 MX$/mes</h4>
                     </div>
                     <hr />
-                    <p>🟢 300 Sitios web</p>
-                    <p>🟢 ~200,000 Visitas Mensuales</p>
-                    <p>🟢 200GB de almacenamiento NVMe</p>
-                    <p>🟢 2,000,000 Archivos y directorios (inodos)</p>
+                    <p><FaCheck color="green" className="check-icon"/> 300 Sitios web</p>
+                    <p><FaCheck color="green" className="check-icon"/> ~200,000 Visitas Mensuales</p>
+                    <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
+                    <p><FaCheck color="green" className="check-icon"/> 2,000,000 Archivos y directorios (inodos)</p>
                     <div>
                         <a className="btn-hostinger"
                             rel="noopener noreferrer"
@@ -221,6 +223,7 @@ function Home(){
                 <a href="https://drive.google.com/file/d/1f3_tjQXoW-sFxJhNpKr7UeYAD7pYSOkS/view?usp=sharing">Ver en Google docs</a>
             </section>
         </section>
+        
     </main>
 
     <Footer/>

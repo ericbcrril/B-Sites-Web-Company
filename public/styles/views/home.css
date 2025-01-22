@@ -188,6 +188,12 @@ main{
     border: .5px solid rgb(40, 121, 125);
     box-shadow: 0 0 5px 0 rgb(40, 121, 125);
 }
+.paquete p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1em;
+}
 .paqueteH{
     border: .5px solid #673de6;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.8);
@@ -226,6 +232,7 @@ main{
     color: rgb(71, 68, 68);
     text-decoration: none;
     align-items: center;
+    white-space: nowrap;
 }
 
 @media (min-width: 1367px) {
@@ -399,7 +406,9 @@ main{
         margin: 20px;
         text-wrap: initial;/**/
     }
-    
+    .paquete p, .paqueteH p{
+        font-size: .7em;
+    }
     .secN3{
         background-size: cover;
         background-position: center;
@@ -407,7 +416,6 @@ main{
         margin: 10px;/**/
         height: 80vh;
         width: 80vw;
-        border: 1px solid black;
     }
 }
 
@@ -483,7 +491,9 @@ main{
         margin: 20px;
         text-wrap: initial;/**/
     }
-    
+    .paquete p, .paqueteH p{
+        font-size: .7em;
+    }
     .secN3{
         background-size: cover;
         background-position: center;
@@ -491,7 +501,6 @@ main{
         margin: 10px;/**/
         height: 80vh;
         width: 80vw;
-        border: 1px solid black;
     }
 }
 
