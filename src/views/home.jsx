@@ -52,7 +52,7 @@ function Home(){
 
     return(<>
 
-    <ScreenSizes/>
+ {/*<ScreenSizes/>*/}
 
     <Navbar/>
 
