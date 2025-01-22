@@ -4,7 +4,7 @@ import { useEffect } from "react";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-import ScreenSizes from "../scripts/getWinScreenSizes";
+//import ScreenSizes from "../scripts/getWinScreenSizes";
 import { FaCheck, FaBan } from "react-icons/fa6";
 //import ChatBot from "../components/misc/chatBot";
 
