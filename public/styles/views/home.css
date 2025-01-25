@@ -36,6 +36,7 @@ html {
 
 body {
     overflow: hidden;
+    margin: 0 !important;
 }
 
 
@@ -506,33 +507,6 @@ main{
 
 /*Otros*/
 @media (max-height: 550px) {
-    .ws0 img{
-        width: 180px;
-    }
-    .ws1{
-        width: 300px;
-    }
-    .secN0{
-        margin: 20px;
-        padding: 10px;
-    }
-    .secN0 div{
-        margin: 10px;
-    }
-    .secN0 img{
-        width: 250px;
-    }
-
-    .secN1 .img-ft-desk{
-        width: 680px;
-    }
-
-    #redes{
-        margin: 0px;
-    }
-}
-
-@media (max-height: 420px) {
     .ws0 img{
         width: 180px;
     }
