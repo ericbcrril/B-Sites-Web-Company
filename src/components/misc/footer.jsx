@@ -1,6 +1,6 @@
 //Pie de pagina 
 
-import { FaFacebookSquare } from 'react-icons/fa';
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
 function Footer(){
     return(
@@ -11,7 +11,7 @@ function Footer(){
                     <h2>Informacion</h2>
                     <a href="#Nosotros" >Nosotros</a>
                     <a href="#NuestroServicio" >Servicio</a>
-                    <a href="#Costos" >Precios</a>
+                    <a href="#Costos" >Costos</a>
                     <a href="#Politicas" >Politicas</a>
                 </section>
                 
@@ -23,9 +23,14 @@ function Footer(){
 
                 <section id="redes">
                     <h2>Sigue Nuestras Redes</h2>
-                    <a href="https://www.facebook.com/profile.php?id=61569565533751">
+                    <div style={{display: 'flex'}}>
+                        <a href='#facebook' onClick={() => window.open("https://www.facebook.com/profile.php?id=61569565533751")}>
                         <FaFacebookSquare size={28} className='facebook-icon'/>                        
-                    </a>
+                        </a>
+                        <a href='#instagram' onClick={() => window.open('https://www.instagram.com/b.sites.company/')}>
+                            <FaInstagram size={28} className='instagram-icon'/>                        
+                        </a>
+                    </div>
                 </section>
 
             </div>

@@ -131,6 +131,7 @@ main{
     background-size: cover;
     background-position: center;
     flex-direction: column;
+    height: fit-content;
 }
 .img-ft-desk{
     width: 1300px;
@@ -156,7 +157,7 @@ main{
 /*Seccion Paquetes*/
 .secN2{
     flex-direction: column;
-    margin: 300px;
+    color: rgb(71, 68, 68);
 }
 .secN2 p{
     font-size: 18px;
@@ -414,7 +415,7 @@ main{
         padding: 1vh;/**/
         margin: 10px;/**/
         height: 80vh;
-        width: 80vw;
+        width: 100vw;
     }
 }
 
@@ -499,7 +500,7 @@ main{
         padding: 1vh;/**/
         margin: 10px;/**/
         height: 80vh;
-        width: 80vw;
+        width: 100vw;
     }
 }
 
