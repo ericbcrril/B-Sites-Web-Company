@@ -4,9 +4,7 @@ import { useEffect } from "react";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-//import ScreenSizes from "../scripts/getWinScreenSizes";
-import { FaCheck, FaBan } from "react-icons/fa6";
-//import ChatBot from "../components/misc/chatBot";
+import { FaCheck } from "react-icons/fa6";
 
 function Home(){
     const IFW = ["2807211", "7922055", "7913078"];
@@ -34,16 +32,16 @@ function Home(){
         let message;
         switch(e){
             case 0:
-                message = 'Hola me interesa el paquete Web Basica'
+                message = 'Hola me interesa desarrollar una Landing Page'
             break;
             case 1:
-                message = 'Hola me interesa el paquete Web Estandar'
+                message = 'Hola me interesa desarrollar una Web Corporativa'
             break;
             case 2:
-                message = 'Hola me interesa el paquete Web Avanzada'
+                message = 'Hola me interesa desarrollar una Tienda en Linea'
             break;
             default:
-             message = 'Hola me interesa el paquete Web Basica'
+             message = 'Hola me interesa desarrollar una Landing Page'
         }
         let waLink = `https://wa.me/+523318435194?text=${message}`;
         window.open(waLink)
@@ -52,11 +50,7 @@ function Home(){
 
     return(<>
 
- {/*<ScreenSizes/>*/}
-
     <Navbar/>
-
-    
 
     <section className="welcome-section" id="Bienvenido">
         <div className="ws0">
@@ -86,141 +80,139 @@ function Home(){
                 <img src="/images/resource/flujoTrabajoMovil.webp" alt="" className="img-ft-mobile"/>
         </section>
 
-        <section className="secN2">
-            <h2 id="Costos" className="sub-title-main">Nuestros Paquetes</h2>
+        <section className="secN2" id="Costos">
+            <h2 className="sub-title-main">Costos</h2>
             <p className="secN2-p">Obten una aproximacion del costo de desarrollo de tu proyecto</p>
-            <p className="secN2-p">⚠️ IMPORTANTE: Los precios mencionados son guías aproximadas y pueden variar según la complejidad específica de cada proyecto.</p>
-            <section>
-                <div className="paquete">
-                    <div>
-                        <h3>Web Basica</h3>
-                        <h4>1500 MXN</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio</p>
-                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion</p>
-                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales</p>
-                    <p><FaBan color="red" className="check-icon"/> 3 meses Host GRATIS</p>
-                    <p><FaBan color="red" className="check-icon"/> 5 Paginas de navegacion</p>
-                    <p><FaBan color="red" className="check-icon"/> Paginas Ilimitadas</p>
-                    <p><FaBan color="red" className="check-icon"/> Mensageria a tu WhatsApp y Email</p>
-                    <div>
-                        <button
-                        onClick={() => handleSendWaM(0)}
-                        >Elegir Plan</button>
-                    </div>
-                </div>
-                <div className="paquete">
-                    <div>
-                        <h3>Web Estandar</h3>
-                        <h4>3500 MXN</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio</p>
-                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion</p>
-                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales</p>
-                    <p><FaCheck color="green" className="check-icon"/> 3 meses Host GRATIS</p>
-                    <p><FaCheck color="green" className="check-icon"/> 5 Paginas de navegacion</p>
-                    <p><FaBan color="red" className="check-icon"/> Paginas Ilimitadas</p>
-                    <p><FaBan color="red" className="check-icon"/> Mensageria a tu WhatsApp y Email</p>
-                    <div>
-                        <button
-                        onClick={() => handleSendWaM(1)}
-                        >Elegir Plan</button>
-                    </div>
-                </div>
-                <div className="paquete">
-                    <div>
-                        <h3>Web Avanzada</h3>
-                        <h4>4500 MXN</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> Diseño para Celular, Tablets y Escritorio.</p>
-                    <p><FaCheck color="green" className="check-icon"/> 3 Paginas de navegacion.</p>
-                    <p><FaCheck color="green" className="check-icon"/> Integracion con tus redes sociales.</p>
-                    <p><FaCheck color="green" className="check-icon"/> 3 meses Host GRATIS.</p>
-                    <p><FaCheck color="green" className="check-icon"/> 5 Paginas de navegacion.</p>
-                    <p><FaCheck color="green" className="check-icon"/> Paginas Ilimitadas.</p>
-                    <p><FaCheck color="green" className="check-icon"/> Mensageria a tu WhatsApp y Email.</p>
-                    <div>
-                        <button
-                        onClick={() => handleSendWaM(2)}
-                        >Elegir Plan</button>
-                    </div>
-                </div>
-            </section>
-            <br /><br />
-            <h2 className="sub-title-main" id="Hostinger">Hosting Web</h2>
-            <p className="secN2-p">Afiliados por Hostinger</p>
-            <p className="secN2-p">✔ Obten Un descuento por contratar desde nuestro sitio B-Sites</p>
-            <section>
-                <div className="paqueteH">
-                    <div>
-                        <h3>Hosting Premium</h3>
-                        <p>Todo lo que necesitas para crear tu sitio web</p>
-                        <h4>59.99 MX$/mes</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
-                    <p><FaCheck color="green" className="check-icon"/> ~25,000 Visitas Mensuales</p>
-                    <p><FaCheck color="green" className="check-icon"/> 100GB de almacenamiento NVMe</p>
-                    <p><FaCheck color="green" className="check-icon"/> 400,000 Archivos y directorios (inodos)</p>
-                    <div>
-                        <a className="btn-hostinger" 
-                            rel="noopener noreferrer"
-                            target="_blank" 
-                            href="https://www.hostinger.mx/cart?product=hosting%3Ahostinger_premium&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d79-e717-71e8-a0aa-c37f29d86460"
-                            >Elegir Plan</a>
-                    </div>                </div>
-                <div className="paqueteH">
-                    <div>
-                        <h3>Hosting Empresarial</h3>
-                        <p>Sube de nivel con más potencia y funciones mejoradas</p>
-                        <h4>79.99 MX$/mes</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
-                    <p><FaCheck color="green" className="check-icon"/> ~100,000 Visitas Mensuales</p>
-                    <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
-                    <p><FaCheck color="green" className="check-icon"/> 600,000 Archivos y directorios (inodos)</p>
-                    <div>
-                        <a className="btn-hostinger" 
-                            rel="noopener noreferrer"
-                            target="_blank" 
-                            href="https://www.hostinger.mx/cart?product=hosting%3Ahostinger_business&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d7a-a70a-7189-ac7b-d28ff3a61431"
-                            >Elegir Plan</a>
-                    </div>                </div>
-                <div className="paqueteH">
-                    <div>
-                        <h3>Cloud Startup</h3>
-                        <p>Optimizado para empresas y tiendas online</p>
-                        <h4>166.99 MX$/mes</h4>
-                    </div>
-                    <hr />
-                    <p><FaCheck color="green" className="check-icon"/> 300 Sitios web</p>
-                    <p><FaCheck color="green" className="check-icon"/> ~200,000 Visitas Mensuales</p>
-                    <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
-                    <p><FaCheck color="green" className="check-icon"/> 2,000,000 Archivos y directorios (inodos)</p>
-                    <div>
-                        <a className="btn-hostinger"
-                            rel="noopener noreferrer"
-                            target="_blank" 
-                            href="https://www.hostinger.mx/cart?product=hosting%3Acloud_economy&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d7a-c36c-7246-9a07-428722e5f30a"
-                            >Elegir Plan</a>
-                    </div>
-                </div>
-            </section>
+                        <p>Ofrecemos servicios de hosting accesibles y confiables para tu sitio web:</p>
+                        <ul>
+                            <li><FaCheck color="green" className="check-icon" /> Hosting de 1 mes: <strong>40 MXN</strong></li>
+                            <li><FaCheck color="green" className="check-icon" /> Hosting de 1 año: <strong>350 MXN</strong></li>
+                            <li><FaCheck color="green" className="check-icon" /> Dominio personalizado (1 año): <strong>300 MXN</strong>, renovación: <strong>400 MXN</strong></li>
+                        </ul>
+                        <section id="Costos">
+                            <div className="paquete">
+                                <div>
+                                    <h3>Landing Page</h3>
+                                    <h4>1500 MXN</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon" /> Diseño para Celular, Tablets y Escritorio</p>
+                                <p><FaCheck color="green" className="check-icon" /> Hasta 3 secciones de navegación</p>
+                                <p><FaCheck color="green" className="check-icon" /> Integración con tus redes sociales</p>
+                                <p><FaCheck color="green" className="check-icon" /> Optimización básica para buscadores (SEO)</p>
+                                <p><FaCheck color="green" className="check-icon" /> Tiempo de entrega rápido</p>
+                                <div>
+                                    <button onClick={() => handleSendWaM(0)}>Elegir Plan</button>
+                                </div>
+                            </div>
+
+                            <div className="paquete">
+                                <div>
+                                    <h3>Web Corporativa</h3>
+                                    <h4>3500 MXN</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon" /> Diseño para Celular, Tablets y Escritorio</p>
+                                <p><FaCheck color="green" className="check-icon" /> Hasta 5 páginas de navegación</p>
+                                <p><FaCheck color="green" className="check-icon" /> Integración con tus redes sociales</p>
+                                <p><FaCheck color="green" className="check-icon" /> Formulario de contacto funcional</p>
+                                <p><FaCheck color="green" className="check-icon" /> Hosting gratuito por 3 meses</p>
+                                <div>
+                                    <button onClick={() => handleSendWaM(1)}>Elegir Plan</button>
+                                </div>
+                            </div>
+
+                            <div className="paquete">
+                                <div>
+                                    <h3>Tienda en Línea</h3>
+                                    <h4>4500 MXN</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon" /> Diseño para Celular, Tablets y Escritorio</p>
+                                <p><FaCheck color="green" className="check-icon" /> Sistema de productos y carrito de compras</p>
+                                <p><FaCheck color="green" className="check-icon" /> Integracion con Google Analytics</p>
+                                <p><FaCheck color="green" className="check-icon" /> Mensajería automática a WhatsApp para pedidos</p>
+                                <p><FaCheck color="green" className="check-icon" /> Hosting gratuito por 3 meses</p>
+                                <div>
+                                    <button onClick={() => handleSendWaM(2)}>Elegir Plan</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/**
+                         <br /><br />
+                        <h2 className="sub-title-main" id="Hostinger">Hosting Web</h2>
+                        <p className="secN2-p">Afiliados por Hostinger</p>
+                        <p className="secN2-p">✔ Obten Un descuento por contratar desde nuestro sitio B-Sites</p>
+                        <section>
+                            <div className="paqueteH">
+                                <div>
+                                    <h3>Hosting Premium</h3>
+                                    <p>Todo lo que necesitas para crear tu sitio web</p>
+                                    <h4>59.99 MX$/mes</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
+                                <p><FaCheck color="green" className="check-icon"/> ~25,000 Visitas Mensuales</p>
+                                <p><FaCheck color="green" className="check-icon"/> 100GB de almacenamiento NVMe</p>
+                                <p><FaCheck color="green" className="check-icon"/> 400,000 Archivos y directorios (inodos)</p>
+                                <div>
+                                    <a className="btn-hostinger" 
+                                        rel="noopener noreferrer"
+                                        target="_blank" 
+                                        href="https://www.hostinger.mx/cart?product=hosting%3Ahostinger_premium&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d79-e717-71e8-a0aa-c37f29d86460"
+                                        >Elegir Plan</a>
+                                </div>                </div>
+                            <div className="paqueteH">
+                                <div>
+                                    <h3>Hosting Empresarial</h3>
+                                    <p>Sube de nivel con más potencia y funciones mejoradas</p>
+                                    <h4>79.99 MX$/mes</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon"/> 100 Sitios web</p>
+                                <p><FaCheck color="green" className="check-icon"/> ~100,000 Visitas Mensuales</p>
+                                <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
+                                <p><FaCheck color="green" className="check-icon"/> 600,000 Archivos y directorios (inodos)</p>
+                                <div>
+                                    <a className="btn-hostinger" 
+                                        rel="noopener noreferrer"
+                                        target="_blank" 
+                                        href="https://www.hostinger.mx/cart?product=hosting%3Ahostinger_business&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d7a-a70a-7189-ac7b-d28ff3a61431"
+                                        >Elegir Plan</a>
+                                </div>                </div>
+                            <div className="paqueteH">
+                                <div>
+                                    <h3>Cloud Startup</h3>
+                                    <p>Optimizado para empresas y tiendas online</p>
+                                    <h4>166.99 MX$/mes</h4>
+                                </div>
+                                <hr />
+                                <p><FaCheck color="green" className="check-icon"/> 300 Sitios web</p>
+                                <p><FaCheck color="green" className="check-icon"/> ~200,000 Visitas Mensuales</p>
+                                <p><FaCheck color="green" className="check-icon"/> 200GB de almacenamiento NVMe</p>
+                                <p><FaCheck color="green" className="check-icon"/> 2,000,000 Archivos y directorios (inodos)</p>
+                                <div>
+                                    <a className="btn-hostinger"
+                                        rel="noopener noreferrer"
+                                        target="_blank" 
+                                        href="https://www.hostinger.mx/cart?product=hosting%3Acloud_economy&period=12&referral_type=cart_link&REFERRALCODE=II6BSEABSHKH&referral_id=01944d7a-c36c-7246-9a07-428722e5f30a"
+                                        >Elegir Plan</a>
+                                </div>
+                            </div>
+                        </section>
+                         */}
         </section>
  
         <section className="secN3" id="Politicas">
-            <section>
+            <section id="Politicas">
                 <h2 className="sub-title-main">Politicas</h2>
                 <p>Para el desarrollo de una web en B-Sites</p>
                 <a href="/docs/Terminos y Condiciones.pdf" download="Terminos y Condiciones B-Sites">
                     <IoMdDownload/>Descargar
                 </a>
                 <p>O</p>
-                <a href="https://drive.google.com/file/d/1f3_tjQXoW-sFxJhNpKr7UeYAD7pYSOkS/view?usp=sharing">Ver en Google docs</a>
+                <a href="https://drive.google.com/file/d/1_gwtJXdj4CbdgrP34UjgXRjRekE_T1BU/view?usp=sharing">Ver en Google Drive</a>
             </section>
         </section>
         

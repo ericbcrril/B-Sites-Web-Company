@@ -89,7 +89,6 @@ function Navbar() {
                 <a href="#Nosotros" className={activeSection === "Nosotros" ? "active-link" : ""}>Bienvenido</a>
                 <a href="#NuestroServicio" className={activeSection === "NuestroServicio" ? "active-link" : ""}>Nuestro servicio</a>
                 <a href="#Costos" className={activeSection === "Costos" ? "active-link" : ""}>Desarrollo web</a>
-                <a href="#Hostinger" className={activeSection === "Hostinger" ? "active-link" : ""}>Hosting Web</a>
                 <a href="#Politicas" className={activeSection === "Politicas" ? "active-link" : ""}>Politicas</a>
                 <button onClick={() => setVisible(!formVisible)}>Contactanos</button>
             </nav>
