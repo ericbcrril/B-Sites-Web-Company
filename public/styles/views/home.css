@@ -38,6 +38,9 @@ body {
     overflow: hidden;
 }
 
+p {
+    hyphens: auto;
+}
 
 /*Portada*/
 .welcome-section{

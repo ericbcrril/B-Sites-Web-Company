@@ -5,7 +5,7 @@ const sendMessage = (event) => {
     const message = event.target.message.value;
   
     // Aquí defines el número de teléfono al cual se enviará el mensaje. Debe estar en formato internacional.
-    const phoneNumber = '+523318435194'; // Reemplaza con el número de WhatsApp al que quieres enviar el mensaje.
+    const phoneNumber = '+523841177360'; // Reemplaza con el número de WhatsApp al que quieres enviar el mensaje.
   
     // Construimos el mensaje para enviar
     const waMessage = `Hola, soy ${userName}.\nMi proyecto:\n${message}`;

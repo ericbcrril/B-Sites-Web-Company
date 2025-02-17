@@ -4,7 +4,7 @@ import { useEffect } from "react";
 //Componentes
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-import ScreenSizes from "../scripts/getWinScreenSizes";
+//import ScreenSizes from "../scripts/getWinScreenSizes";
 import { FaCheck } from "react-icons/fa6";
 //import ChatBot from "../components/misc/chatBot";
 
@@ -45,14 +45,14 @@ function Home(){
             default:
              message = 'Hola me interesa desarrollar una Landing Page'
         }
-        let waLink = `https://wa.me/+523318435194?text=${message}`;
+        let waLink = `https://wa.me/+523841177360?text=${message}`;
         window.open(waLink)
     }
     
 
     return(<>
 
-    <ScreenSizes/>
+    {/*<ScreenSizes/>*/}
 
     <Navbar/>
 
@@ -75,7 +75,7 @@ function Home(){
                         se dedica al desarrollo de aplicaciones y sitios web.</p>
                     <p>Nuestro equipo está compuesto por desarrolladores apasionados por la tecnología 
                         y enfocados en ofrecer soluciones innovadoras y eficientes al mejor precio.</p>
-                    <p>Nosotros te ayudaremos a destacar de entre los demas, diseñando y desarrollando una web
+                    <p>Nosotros te ayudaremos a destacar de entre los demás, diseñando y desarrollando una web
                         funcional para tu negocio.</p>
                 </div>
             </section>
@@ -88,7 +88,7 @@ function Home(){
 
         <section className="secN2" id="Costos">
             <h2 className="sub-title-main">Costos</h2>
-            <p className="secN2-p">Obten una aproximacion del costo de desarrollo de tu proyecto</p>
+            <p className="secN2-p">Obtén una aproximación del costo de desarrollo de tu proyecto</p>
                         <p>Ofrecemos servicios de hosting accesibles y confiables para tu sitio web:</p>
                         <ul>
                             <li><FaCheck color="green" className="check-icon" /> Hosting de 1 mes: <strong>40 MXN</strong></li>
@@ -136,7 +136,7 @@ function Home(){
                                 <hr />
                                 <p><FaCheck color="green" className="check-icon" /> Diseño para Celular, Tablets y Escritorio</p>
                                 <p><FaCheck color="green" className="check-icon" /> Sistema de productos y carrito de compras</p>
-                                <p><FaCheck color="green" className="check-icon" /> Integracion con Google Analytics</p>
+                                <p><FaCheck color="green" className="check-icon" /> Integración con Google Analytics</p>
                                 <p><FaCheck color="green" className="check-icon" /> Mensajería automática a WhatsApp para pedidos</p>
                                 <p><FaCheck color="green" className="check-icon" /> Hosting gratuito por 3 meses</p>
                                 <div>
@@ -212,7 +212,7 @@ function Home(){
  
         <section className="secN3" id="Politicas">
             <section id="Politicas">
-                <h2 className="sub-title-main">Politicas</h2>
+                <h2 className="sub-title-main">Políticas</h2>
                 <p>Para el desarrollo de una web en B-Sites</p>
                 <a href="/docs/Terminos y Condiciones.pdf" download="Terminos y Condiciones B-Sites">
                     <IoMdDownload/>Descargar
