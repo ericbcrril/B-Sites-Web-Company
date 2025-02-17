@@ -8,16 +8,16 @@ function Footer(){
             <div className="footer-div0">
 
                 <section >
-                    <h2>Informacion</h2>
+                    <h2>Información</h2>
                     <a href="#Nosotros" >Nosotros</a>
                     <a href="#NuestroServicio" >Servicio</a>
                     <a href="#Costos" >Costos</a>
-                    <a href="#Politicas" >Politicas</a>
+                    <a href="#Politicas" >Políticas</a>
                 </section>
                 
                 <section >
-                    <h2>Contactanos</h2>
-                    <a href='https://wa.me/+523318435194'>3318435194</a>
+                    <h2>Contacto</h2>
+                    <a href='https://wa.me/+523841177360'>+523841177360</a>
                     <a href='mailto:bsitesmanagement@gmail.com'>bsitesmanagement@gmail.com</a>
                 </section>
 

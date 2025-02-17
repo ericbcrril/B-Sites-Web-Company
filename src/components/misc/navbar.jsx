@@ -79,7 +79,7 @@ function Navbar() {
     return (
         <>
         <button 
-                onClick={() =>  window.open(`https://wa.me/+523318435194`)} 
+                onClick={() =>  window.open(`https://wa.me/+523841177360`)} 
                 className="btn-contactanos"
                 ><FaWhatsapp/></button>
             <nav>
@@ -89,8 +89,8 @@ function Navbar() {
                 <a href="#Nosotros" className={activeSection === "Nosotros" ? "active-link" : ""}>Bienvenido</a>
                 <a href="#NuestroServicio" className={activeSection === "NuestroServicio" ? "active-link" : ""}>Nuestro servicio</a>
                 <a href="#Costos" className={activeSection === "Costos" ? "active-link" : ""}>Desarrollo web</a>
-                <a href="#Politicas" className={activeSection === "Politicas" ? "active-link" : ""}>Politicas</a>
-                <button onClick={() => setVisible(!formVisible)}>Contactanos</button>
+                <a href="#Politicas" className={activeSection === "Politicas" ? "active-link" : ""}>Políticas</a>
+                <button onClick={() => setVisible(!formVisible)}>Contacto</button>
             </nav>
             <ContactForm />
         </>
