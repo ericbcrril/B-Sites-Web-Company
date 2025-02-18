@@ -8,12 +8,14 @@ import sendEmail from "../../scripts/sendEmailMessage";
 
 function Navbar() {
     const [formVisible, setVisible] = useState(false);
-    const [WaEm, sendWaEm] = useState(true);
-    const [activeSection, setActiveSection] = useState(""); // Estado para la sección activa
+    const [WaEm, setWaEm] = useState("whatsapp");
+    const [selectedIcon, setSelectedIcon] = useState(<FaWhatsapp color="#25D366" />); // Icono inicial
+    const [activeSection, setActiveSection] = useState("");
 
-    function handleClick(o){
-        setVisible(true)
-        sendWaEm(o)
+    function handleSelectChange(event) {
+        const selectedValue = event.target.value;
+        setWaEm(selectedValue);
+        setSelectedIcon(selectedValue === "whatsapp" ? <FaWhatsapp color="#25D366" /> : <TfiEmail color="#0072C6" />);
     }
 
     // Detectar sección visible
@@ -25,11 +27,11 @@ function Navbar() {
             sections.forEach((section) => {
                 const rect = section.getBoundingClientRect();
                 if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-                    currentSection = section.id; // Actualiza con el ID de la sección visible
+                    currentSection = section.id;
                 }
             });
 
-            setActiveSection(currentSection); // Cambia la sección activa en el estado
+            setActiveSection(currentSection);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -37,39 +39,29 @@ function Navbar() {
     }, []);
 
     function ContactForm() {
+        const handleSubmit = (event) => {
+            event.preventDefault();
+            WaEm === "whatsapp" ? sendMessage() : sendEmail();
+        };
+
         return (
             <form
-                onSubmit={WaEm ? sendMessage : sendEmail}
+                onSubmit={handleSubmit}
                 className="contact-form"
                 style={formVisible ? { position: "fixed", display: "flex" } : { display: "none" }}
             >
                 <label htmlFor="userName">Nombre:</label>
-                <input type="text" name="userName" id="userName" required={true} placeholder="¿Cual es tu Nombre?"/>
-                <textarea name="message" id="message" cols="30" rows="10" required={true} placeholder="Cuntanos algo sobre el proyecto que tienes en mente..."></textarea>
-                <div>
-                    <label htmlFor="wasap" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                        <input
-                            type="radio"
-                            name="formOption"
-                            id="wasap"
-                            value="whatsapp"
-                            onClick={() => handleClick(true)}
-                        />
-                        <FaWhatsapp color="#25D366" size={20} /> WhatsApp
-                    </label>
-                </div>
-                <div>
-                    <label htmlFor="email" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                        <input
-                            type="radio"
-                            name="formOption"
-                            id="email"
-                            value="email"
-                            onClick={() => handleClick(false)}
-                        />
-                        <TfiEmail color="#0072C6" size={20} /> Email
-                    </label>
-                </div>
+                <input type="text" name="userName" id="userName" required placeholder="¿Cuál es tu Nombre?" />
+                
+                <textarea name="message" id="message" cols="30" rows="10" required placeholder="Cuéntanos algo sobre el proyecto que tienes en mente..."></textarea>
+                <br />
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    {selectedIcon} {/* Aquí se muestra el icono seleccionado */}
+                    <select id="contactMethod" name="contactMethod" value={WaEm} onChange={handleSelectChange}>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div><br />
 
                 <button type="submit">Enviar</button>
             </form>
@@ -78,10 +70,13 @@ function Navbar() {
 
     return (
         <>
-        <button 
-                onClick={() =>  window.open(`https://wa.me/+523841177360`)} 
+            <button 
+                onClick={() => window.open(`https://wa.me/+523841177360`)} 
                 className="btn-contactanos"
-                ><FaWhatsapp/></button>
+            >
+                <FaWhatsapp/>
+            </button>
+
             <nav>
                 <a href="#Bienvenido" className={activeSection === "Bienvenido" ? "active-link" : ""}>
                     <img src="images/logos/BSitesLogo00.webp" alt="Logo00" />
@@ -92,6 +87,7 @@ function Navbar() {
                 <a href="#Politicas" className={activeSection === "Politicas" ? "active-link" : ""}>Políticas</a>
                 <button onClick={() => setVisible(!formVisible)}>Contacto</button>
             </nav>
+            
             <ContactForm />
         </>
     );
