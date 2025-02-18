@@ -39,6 +39,7 @@ html {
 
 body {
     overflow: hidden;
+    margin: 0 !important;
 }
 
 p {
@@ -632,7 +633,7 @@ main{
     .secN2 p{
         font-size: 12px;/**/
     }
-
+  
     .secN2 section{
         margin: 10px;/**/
     }
