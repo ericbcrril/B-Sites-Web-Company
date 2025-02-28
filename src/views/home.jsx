@@ -68,7 +68,7 @@ function Home(){
             <img className="img-secN0" src="/images/resource/4893415.webp" alt="" />
                 <div>
                     <h2 className="sub-title-main">¿Quienes somos?</h2>
-                    <p>Somos una empresa mexicana de tecnología, joven, dinámica y en constante crecimiento que
+                    <p>Somos una organización de tecnología joven, dinámica y en constante crecimiento que
                         se dedica al desarrollo de aplicaciones y sitios web.</p>
                     <p>Nuestro equipo está compuesto por desarrolladores apasionados por la tecnología 
                         y enfocados en ofrecer soluciones innovadoras y eficientes al mejor precio.</p>
