@@ -1,18 +1,19 @@
 //Pie de pagina 
 
+import { motion } from 'framer-motion';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
 function Footer(){
     return(
-        <footer>
-            <div className="footer-div0">
+        <motion.footer initial={{ y: 150 }} whileInView={{ y: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}>
+            <div className="footer-div0" >
 
                 <section >
                     <h2>Información</h2>
-                    <a href="#Nosotros" >Nosotros</a>
-                    <a href="#NuestroServicio" >Servicio</a>
-                    <a href="#Costos" >Costos</a>
-                    <a href="#Politicas" >Políticas</a>
+                    <a href="#about" >Nosotros</a>
+                    <a href="#services" >Servicio</a>
+                    <a href="#pricing" >Costos</a>
+                    <a href="#hero" >Inicio</a>
                 </section>
                 
                 <section >
@@ -36,10 +37,10 @@ function Footer(){
             </div>
             <hr />
             <div className="footer-div1">
-                <p>©Copyright 2024 Web Designed and Develop by B-Sites</p>
+                <p>©Copyright 2025 Web Designed and Develop by B-Sites</p>
                 <a style={{color: 'white', textDecoration: 'none'}} href="http://www.freepik.com">Images Designed by Freepik</a>
             </div>
-        </footer>
+        </motion.footer>
     );
 }
 
