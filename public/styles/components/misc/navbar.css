@@ -1,273 +1,80 @@
-@keyframes fadeInUp {
-    from {
-      opacity: 1;
-      transform: translateY(-400px); /* Inicia 400px más arriba */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); /* Termina en su posición original */
-    }
-  }
-
-  @keyframes activeLink {
-    from{}
-    to{scale: 1.1;}
-  }
-
-nav{
-    position: fixed;
-    display: flex;
+header {
     background-color: rgb(16, 11, 11);
-    color: white;
-    height: 100px;
-    width: 100%;
-    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .navbar-content {
+    display: flex;
     align-items: center;
-    font-size: 18px;
-    z-index: 2;
-}
+    flex-direction: row;
+    width: 100%;
+  }
 
-nav img{
-    margin: 15px;
-    width: 60px;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: transform .1s, scale .1s;
-}
+  .navbar {
+    display: flex;
+    padding: 1rem 0;
+  }
 
-nav img:hover{
-    transform: translateY(-5px);
-    scale: 1.05;
-}
+  .navbar img {
+      width: 3%;
+      border-radius: 50%;
+      margin-left: 1%;
+  }
 
-nav a{
-    text-decoration: none;
-    color: white;
-    margin: 15px;
-    font-weight: bold;
-    transition: transform .1s, scale .1s;
-}
+  .navbar .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #fff; /* Color principal */
+  }
 
-nav a:hover{
-    transform: translateY(-5px);
-    scale: 1.05;
-}
+  .nav-links {
+      margin-right: 1%;
+      width: 100%;
+  }
 
-.active-link{
-    transform: translateY(-5px);
-    scale: 1.05;
-    animation: activeLink 1s ease-in-out infinite;
-}
-.btn-contactanos{
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+
+  .nav-links li a {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #287d7d;
+  }
+
+  .btn-contactanos{
     display: none;
 }
-nav button{
-    all: unset;
-    cursor: pointer;
-    color: white;
-    background-color: rgb(54, 29, 29);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
-    font-weight: bold;
-    transition: scale .3s, background-color .5s;
-}
 
-nav button:active{
-    scale: .9;
-}
-
-nav button:hover{
-    background-color: rgb(54, 39, 39);
-    animation: pulse 0.5s ease-in infinite;
-}
-
-.contact-form{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 1px solid black;
-    top: 12vh;
-    right: 10px;
-    padding: 20px;
-    animation: fadeInUp 0.5s ease-in-out forwards;
-    z-index: 1;
-}
-
-.contact-form input{
-    border-radius: 5px;
-    margin: 5px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-.contact-form textarea{
-    border-radius: 5px;
-    margin: 5px;
-    resize: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
-
-.contact-form button{
-    margin: 5px;
-}
-
-@media (min-width: 1367px) {
-    
-}
-
-@media (min-width: 1025px) and (max-width: 1366px){
-
-    nav{
-        height: 80px;/**/
-        font-size: 16px;/**/
-    }
-    
-    nav img{
-        margin: 15px;
-        width: 50px;/**/
-    }
-    
-    .contact-form{
-        top: 15vh;/**/
-    }
-
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-    nav{
-        height: 80px;/**/
-        font-size: 16px;/**/
-    }
-    
-    nav img{
-        margin: 15px;
-        width: 50px;/**/
-    }
-    
-    .contact-form{
-        top: 15vh;/**/
-    }
-}
-
-@media (min-width: 427px) and (max-width: 768px){
-    
-    nav{
-        display: none;
+@media (max-width: 450px) {
+    header {
+      display: none !important;
     }
     .btn-contactanos{
-        display: flex !important;
-        position: fixed !important;
-        left: 0 !important;
-        bottom: 2vh !important;
-        all: unset;
-        cursor: pointer;
-        color: white;
-        background-color: rgb(29, 19, 19);
-        border-radius: 50%;
-        padding: 15px;
-        margin: 15px;
-        font-weight: bold;
-        transition: scale .3s, background-color .5s;
-    }
-    
-    .btn-contactanos:active{
-        scale: .9;
-    }
-    
-    .btn-contactanos:hover{
-        background-color: rgb(44, 29, 29);
-        animation: pulse 0.5s ease-in infinite;
-    }
-    
-    .contact-form, .contact-form input, 
-    .contact-form textarea{
-        font-size: 24px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    }
-    .contact-form{
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        z-index: 1;
-        width: 80vw;
-        left: 5vw;
-    }
-    
-    .contact-form input, .contact-form textarea{
-        border-radius: 5px;
-        margin: 5px;
-        width: 80%;
-    }
-    
-    .contact-form button{
-        margin: 5px;
-    }
-
-}
-
-@media (max-width: 426px){
-    
-    nav{
-        display: none;
-    }
-    .btn-contactanos{
-        display: flex !important;
-        position: fixed !important;
-        left: 0 !important;
-        bottom: 2vh !important;
-        all: unset;
-        cursor: pointer;
-        color: white;
-        background-color: rgb(29, 19, 19);
-        border-radius: 50%;
-        padding: 15px;
-        margin: 15px;
-        font-weight: bold;
-        font-size: xx-large;
-        transition: scale .3s, background-color .5s;
-        z-index: 3;
-    }
-    
-    .btn-contactanos:active{
-        scale: .9;
-    }
-    
-    .btn-contactanos:hover{
-        background-color: rgb(44, 29, 29);
-        animation: pulse 0.5s ease-in infinite;
-    }
-    
-    .contact-form, .contact-form input, 
-    .contact-form textarea{
-        font-size: 24px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    }
-    .contact-form{
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        z-index: 1;
-        width: 80vw;
-        left: 5vw;
-    }
-    
-    .contact-form input, .contact-form textarea{
-        border-radius: 5px;
-        margin: 5px;
-        width: 80%;
-    }
-    
-    .contact-form button{
-        margin: 5px;
-    }
-    
+      display: flex !important;
+      position: fixed !important;
+      left: 0 !important;
+      bottom: 2vh !important;
+      all: unset;
+      cursor: pointer;
+      color: white;
+      background-color: rgb(29, 19, 19);
+      border-radius: 50%;
+      padding: 15px;
+      margin: 15px;
+      font-weight: bold;
+      font-size: xx-large;
+      transition: scale .3s, background-color .5s;
+      display: block;
+      z-index: 999;
+  }
 }
