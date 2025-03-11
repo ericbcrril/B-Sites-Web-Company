@@ -1,0 +1,547 @@
+
+   *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+        scrollbar-color: rgb(40, 121, 125) white;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        background-color: rgb(15, 11, 11);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-image: url(../../images/light_grey_dots_background.webp);
+      background-size: 20%;
+      background-repeat: repeat;
+      background-color: #f9f9f9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ------------------------------
+       CONTENEDOR GENERAL
+    ------------------------------ */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 5%;
+    }
+
+    /* ------------------------------
+       SECCIÓN HERO
+    ------------------------------ */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 0;
+      background: #287d7d;
+      color: #fff;
+      height: 100vh;
+      max-height: 1200px;
+      width: 100%;
+      padding: 10%;
+    }
+
+    .hero .hero-text {
+      flex: 1;
+      margin-right: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero h1 strong {
+      font-family: "Pixelify Sans", sans-serif;
+      font-size: 3.2rem;
+      font-weight: 100;
+    }
+
+    .hero p {
+      margin-bottom: 1.5rem;
+      white-space: nowrap;
+    }
+
+    .hero .btn-hero {
+      background-color: #333;
+    }
+
+    .hero .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+
+    /* ------------------------------
+       SECCIÓN QUIÉNES SOMOS
+    ------------------------------ */
+    .about {
+      padding: 4rem 0;
+    }
+
+    .about .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      color: #333;
+    }
+
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 50%;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px 0px black ;
+    }
+
+    .about-text {
+      flex: 1;
+      font-size: 1.2em;
+      hyphens: auto;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    /* ------------------------------
+       SECCIÓN SERVICIOS
+    ------------------------------ */
+    .services {
+      background-color: #f9f9f9;
+      width: 100%;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .services button {
+      margin-top: 5%;
+    }
+
+    .services .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .services-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      margin-bottom: 1rem;
+      color: green;
+    }
+
+    .service-card p {
+      color: #555;
+    }
+
+    .services-policies {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    /* ------------------------------
+       SECCIÓN PRECIOS / PLANES
+    ------------------------------ */
+    .pricing {
+      padding: 4rem 0;
+    }
+
+    .pricing .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .price-card {
+      background-color: #fff;
+      width: 100%;
+      max-width: 300px;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .price-card h3 {
+      margin-bottom: 0.5rem;
+      color: #2ecc71;
+    }
+
+    .price-value {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .price-features {
+      margin-bottom: 1rem;
+      text-align: left;
+      color: #555;
+    }
+
+    .price-features li {
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-pricing {
+      
+    }
+
+    .btn-pricing:hover {
+        
+    }
+
+    /* Contenedor de paquetes */
+.paquetes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Tarjeta de cada paquete */
+.paquete {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #00796b;
+    text-align: center;
+}
+
+.paquete:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado del paquete */
+.paquete-header h3 {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.paquete-header h4 {
+    font-size: 1.8em;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Características del paquete */
+.paquete-features {
+    text-align: left;
+    height: 55%;
+}
+
+/* Características */
+.paquete p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Botón */
+.paquete button {
+    margin-top: 1.5em;
+}
+
+
+    /* ------------------------------
+       SECCIÓN FAQ
+------------------------------ */
+.faq {
+    padding: 4rem 0;
+    background: #f9f9f9;
+  }
+  
+  .faq .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .faq-items {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+  }
+  
+  .faq-item[open] {
+    background-color: #f0f0f0;
+  }
+  
+  .faq-item p {
+    margin-top: 0.5rem;
+    color: #555;
+  }
+
+   
+
+    /*Tablets Portrait*/
+  @media (min-width: 451px) and (max-width: 1023px) and (min-height: 720px) {
+
+      body {
+        background-size: 50%;
+      }
+    
+      /* ------------------------------
+       SECCIÓN HERO
+    ------------------------------ */
+    .hero {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero .hero-text {
+      margin: 0;
+      flex: none;
+      text-align: center;
+    }
+
+    .hero p {
+      white-space: initial;
+    }
+
+    .hero .hero-image {
+      flex: none;
+      margin-top: -5%;
+    }
+
+    /* ------------------------------
+       SECCIÓN QUIÉNES SOMOS
+    ------------------------------ */
+
+    .about-content {
+      flex-direction: column;
+    }
+
+    .about-text {
+      font-size: 1.8em;
+    }
+
+    .about-image img {
+      border-radius: 50%;
+      max-width: 300px;
+    }
+
+    /* ------------------------------
+       SECCIÓN SERVICIOS
+    ------------------------------ */
+    .services {
+      overflow-x: hidden;
+      width: 80%;
+    }
+
+    .services-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 3fr));
+      gap: 2rem;
+    }
+
+    /* ------------------------------
+       SECCIÓN PRECIOS / PLANES
+    ------------------------------ */
+    
+
+    /* Contenedor de paquetes */
+    .paquetes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* ------------------------------
+       SECCIÓN FAQ
+    ------------------------------ */
+    .faq {
+        width: 100%;
+        padding: 10%;
+        overflow-x: hidden;
+      }
+  
+  }
+
+    /*Mobiles Portrait*/
+  @media (max-width: 450px) {
+
+      body {
+        background-size: 50%;
+      }
+    
+      /* ------------------------------
+       SECCIÓN HERO
+    ------------------------------ */
+    .hero {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero .hero-text {
+      margin: 0;
+      flex: none;
+      text-align: center;
+    }
+
+    .hero p {
+      white-space: initial;
+    }
+
+    .hero .hero-image {
+      flex: none;
+      margin-top: -5%;
+    }
+
+    /* ------------------------------
+       SECCIÓN QUIÉNES SOMOS
+    ------------------------------ */
+
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-image img {
+      border-radius: 50%;
+    }
+
+    /* ------------------------------
+       SECCIÓN SERVICIOS
+    ------------------------------ */
+    .services {
+      overflow-x: hidden;
+    }
+
+    /* ------------------------------
+       SECCIÓN PRECIOS / PLANES
+    ------------------------------ */
+    
+
+    /* Contenedor de paquetes */
+    .paquetes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* ------------------------------
+       SECCIÓN FAQ
+    ------------------------------ */
+    .faq {
+        width: 100%;
+        padding: 10%;
+        overflow-x: hidden;
+      }
+  
+  }
+
+  /*Mobiles Landscape*/
+  @media (max-height: 450px) and (orientation: landscape) {
+    .hero {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .hero .hero-image img {
+      max-width: 20%;
+      margin-bottom: -5%;
+    }
+
+    .services {
+      overflow-x: hidden;
+    }
+
+    .paquete-features {
+      height: 60%;
+  }
+
+    .faq {
+      overflow-x: hidden;
+    }
+  }

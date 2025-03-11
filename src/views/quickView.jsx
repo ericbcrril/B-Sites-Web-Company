@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { GrFormNextLink } from "react-icons/gr";
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 //Styles
-import '../styles/quickView.css';
+import '../styles/views/quickView.css';
 
 function QuickView() {
     const navigate = useNavigate();

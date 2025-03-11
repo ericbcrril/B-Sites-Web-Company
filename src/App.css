@@ -4,10 +4,10 @@
 }
 
 button{
-  background-color: #333;
+  background-color: #287d7d;
   color: #fff;
   padding: 0.8rem 1.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -20,7 +20,9 @@ button:active{
 }
 
 button:hover{
-  background-color: #287d7d;
+  background-color: #333;
+  transform: translateY(5px);
+  scale: 1.05;
   border: 1px solid white;
 }
 
@@ -28,6 +30,34 @@ body{
  margin: 0 !important;
 }
 
+.btn-back {
+  padding: 10px;
+  border-radius: 0px 0px 10px 0px;
+  position: fixed;
+  z-index: 999;
+  transform:  translateY(-1px) !important;
+}
+
+.btn-back:hover {
+  background-color: #333;
+  scale: 1.1;
+  padding-top: 2rem;
+}
+
+.btn-back #back {
+  transition: all .3s ease;
+}
+.btn-back:hover #back {
+  transform: translateX(-5px);
+}
+
+/* Tidio */
+
+#button-body:hover {
+  background-color: #333 !important;
+}
+
+/**/
 .App {
   text-align: center;
 }
