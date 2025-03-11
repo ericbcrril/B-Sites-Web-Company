@@ -37,6 +37,7 @@ function Navbar() {
             <li><a href="#about">Quiénes somos</a></li>
             <li><a href="#services">Servicios</a></li>
             <li><a href="#pricing">Planes</a></li>
+            {/*<li><a href="Portafolio">Portafolio</a></li>*/}
           </ul>
         </nav>
       </div>

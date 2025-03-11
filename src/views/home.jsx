@@ -1,27 +1,14 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
 import { FaCheck } from "react-icons/fa6";
+import '../styles/views/home.css';
+//import { useNavigate } from "react-router-dom";
 
-function Home() {
+function Home({ isMexico }) {
+  //const navigate = useNavigate();
   const IFW = ["2807211", "7922055", "7913078"];
   const img = IFW[Math.floor(Math.random() * IFW.length)];
-
-  // Estado para determinar si el usuario está en México.
-  const [isMexico, setIsMexico] = useState(true);
-
-  // Detectar la ubicación del usuario usando ipwhois
-  useEffect(() => {
-    fetch("https://ipwho.is/")
-      .then((response) => response.json())
-      .then((data) => {
-        setIsMexico(data.country_code === "MX");
-      })
-      .catch((error) => {
-        console.error("Error detectando la ubicación:", error);
-      });
-  }, []);
 
   function handleSendWaM(e) {
     const messages = [
@@ -139,6 +126,7 @@ function Home() {
               Nosotros te ayudaremos a destacar de entre los demás, diseñando y
               desarrollando una web funcional para tu negocio.
             </p>
+            {/*<button onClick={ () => navigate('/Portafolio') }>Proyectos</button>*/}
           </div>
         </motion.div>
       </motion.section>

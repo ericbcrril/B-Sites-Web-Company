@@ -1,0 +1,258 @@
+/* Estilos generales */
+
+  .html-landing-page-restaurant {
+    scrollbar-color: #e4007c #fff1e6; /* Color de la barra de desplazamiento */
+    scrollbar-width: thin;
+  }
+  
+  .body-landing-page-restaurant {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif; /* Fuente principal */
+    background-color: #fff1e6;
+    background-image: none;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Enlaces sin subrayado y con color heredado */
+  .body-landing-page-restaurant a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* --- Encabezado con imagen de fondo --- */
+  .header-section {
+    background: url('./images/sombrero-mexican-food.webp') no-repeat center center/cover;
+    background-size: cover;
+    width: 100dvw;
+    max-width: none;
+    min-height: 300px; /* Asegura altura en pantallas pequeñas */
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  
+  /* Overlay oscuro para mejorar la legibilidad del texto */
+  .header-section::after {
+    content: "";
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Título principal */
+  .header-section h1 {
+    font-family: 'Merriweather', serif; /* Fuente para títulos */
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px; /* Separación de letras para un estilo más elegante */
+  }
+  
+  /* Navegación */
+  nav {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #fff1e6;
+  }
+  
+  /* --- Secciones de contenido --- */
+  section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* Títulos de sección */
+  section h2 {
+    font-family: 'Merriweather', serif;
+    color: #660033;
+    margin-bottom: 20px;
+    font-size: x-large;
+  }
+  
+  /* Párrafos de sección */
+  section p {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Separador sutil entre secciones (opcional) */
+  section:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+  /* Imágenes en las secciones */
+  .section-img {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Efecto hover en las imágenes para dar un toque moderno */
+  .section-img img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-img img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* --- Botón con gradiente y hover --- */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #e4007c, #be046a);
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #be046a, #e4007c);
+    transform: translateY(-2px);
+  }
+  
+  /* --- Sección de mapas --- */
+  .map-container {
+    width: 100%;
+    height: 400px;
+    border: 3px dashed #e4007c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px black;
+  }
+
+  /* --- Pie de página con gradiente --- */
+  footer {
+    background: linear-gradient(180deg, #e4007c, #be046a);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #e2e2e2;
+  }
+  
+  /* --- Dialog (Menú emergente) --- */
+  .dialog-menu {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+
+    /* Posición centrada */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Fondo oscuro al abrir el dialog */
+  .dialog-menu::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Botón/cerrar dentro del diálogo */
+  .dialog-menu .close-img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #660033;
+  }
+  
+  /* Contenedor de imagen dentro del diálogo */
+  .dialog-menu .image-container {
+    padding: 10px;
+    width: 450px;
+  }
+  
+  .dialog-menu .image-container img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* --- Responsividad --- */
+  
+  /* Tablet portrait */
+  @media (min-width: 451px) and (max-width: 1024px) and (min-height: 720px) {
+    .header-section {
+      min-height: 250px;
+      padding: 50px 10px;
+    }
+    .header-section h1 {
+      font-size: 1.8em;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .map-container {
+      height: 350px;
+    }
+    .dialog-menu .image-container {
+      width: 80vw;
+    }
+  }
+  
+  /* Mobile Portrait */
+  @media (max-width: 450px) {
+    header {
+      padding: 60px 10px;
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    nav a {
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+    section {
+      padding: 40px 10px;
+    }
+    .map-container {
+      height: 300px;
+    }
+    .dialog-menu .image-container {
+      width: 80vw;
+    }
+  }
+  
+  /* Mobile Landscape */
+  @media (max-height: 450px) and (orientation: landscape) {
+    header {
+      padding: 40px 10px;
+    }
+    header h1 {
+      font-size: 1.8em;
+    }
+    section {
+      padding: 30px 10px;
+    }
+    .map-container {
+      height: 250px;
+    }
+  }
+  

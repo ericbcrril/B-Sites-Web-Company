@@ -1,0 +1,335 @@
+:root {
+  --primary-color: #2B6777;     /* Color principal */
+  --secondary-color: #0056b3;   /* Color de acento o hover */
+  --light-color: #f8f9fa;       /* Fondo claro */
+  --dark-color: #333;           /* Texto principal */
+  --transition-speed: 0.3s;     /* Velocidad de transiciones */
+}
+
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: none;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+/* Header fijo y responsivo */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 15px 30px ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color var(--transition-speed);
+}
+
+nav a:hover {
+  color: var(--light-color);
+}
+
+/* Sección Hero */
+.hero {
+  height: 100vh;
+  background: url('./images/header.webp') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 50px; /* Espacio para el header fijo */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 80px;
+  transition: all var(--transition-speed);
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+  scale: 1.1;
+  transform: translateY(5px);
+}
+
+/* Secciones generales */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 60%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/* Equipo */
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Tabla de Horarios */
+.horarios {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.horarios table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.horarios th, .horarios td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.horarios th {
+  background: var(--primary-color);
+  color: white;
+}
+
+.horarios tr:hover {
+  background: #f1f1f1;
+}
+
+/* Sección Testimonios */
+#testimonios {
+  background: #eef2f3;
+}
+
+/* Sección Equipo */
+#equipo {
+  background: #eef2f3;
+}
+#contacto {
+  background: #eef2f3;
+}
+
+
+/* FAQ (Preguntas Frecuentes) */
+#faq {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#faq h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: var(--primary-color);
+}
+
+.faq-item {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  margin-bottom: 5px;
+}
+
+/* Mapa de ubicación */
+.map-container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 10px 10px 0px;
+  background: var(--primary-color);
+  color: white;
+}
+
+ /* --- Responsividad --- */
+  
+  /* Tablet portrait */
+  @media (min-width: 451px) and (max-width: 1024px) and (min-height: 720px) {
+    
+  }
+  
+  /* Mobile Portrait */
+  @media (max-width: 450px) {
+   
+    header .logo {
+        display: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      font-size: 1em;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: x-small;
+      transition: color var(--transition-speed);
+    }
+    
+    nav a:hover {
+      color: var(--light-color);
+    }
+
+  }
+  
+  /* Mobile Landscape */
+  @media (max-height: 450px) and (orientation: landscape) {
+    
+  }
+  

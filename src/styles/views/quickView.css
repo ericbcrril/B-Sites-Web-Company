@@ -1,0 +1,123 @@
+* {
+    font-family: monospace;
+}
+
+/*Contenedor main*/
+.main-quickView {
+    height: 100dvh;
+    width: 100dvw;
+}
+
+/*Menu*/
+.menu-container-quickView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    height: 90vh;
+    width: 30vw;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Menu Header*/
+.menu-header-quickView {
+
+}
+
+.menu-header-quickView img {
+    width: 25%;
+    border-radius: 50%;
+    cursor: none;
+    pointer-events: none;
+}
+
+.menu-header-quickView h1 {
+    color: #333;
+    font-size: x-large;
+}
+
+/*Menu Body*/
+
+.menu-body-quickView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+}
+
+.opt-menu-quickView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(40, 11, 11);
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    width: 40%;
+    transition: all .3s;
+}
+
+.opt-menu-quickView:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.opt-menu-quickView p {
+    transition: all .5s;
+}
+
+.opt-menu-quickView:hover p {
+    transform: translateX(60%);
+}
+
+/*Menu Footer*/
+
+.menu-footer-quickView {
+
+}
+
+.menu-footer-quickView a {
+    color: #333;
+    margin: 10px;
+}
+
+/*Tablet portrait*/
+@media (min-width: 451px) and (max-width: 1024px) and (min-height: 720px) {
+    /*Menu*/
+    .menu-container-quickView {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+/*Mobile Portrait*/
+@media (max-width: 450px) {
+    /*Menu*/
+    .menu-container-quickView {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+/*Mobile Landscape*/
+@media (max-height: 450px) and (orientation: landscape) {
+    /*Menu*/
+    .menu-container-quickView {
+        width: 50%;
+        height: 100%;
+        overflow-y: scroll;
+        justify-content: flex-start;
+    }
+}
