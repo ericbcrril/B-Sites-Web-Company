@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaInstagram, FaFacebookSquare } from "react-icons/fa";
-import Exit from '../../components/misc/backToTheMainWeb';
+//import Exit from '../../components/misc/backToTheMainWeb';
 
 // Imágenes
 import headerImg from './images/sombrero-mexican-food.webp';
@@ -291,7 +291,7 @@ function Index() {
         </head>
         <body className='body-landing-page-restaurant'>
             
-            <Exit />
+            {/*<Exit />*/}
             
             {/* Sección 1: Encabezado */}
             <motion.section 
