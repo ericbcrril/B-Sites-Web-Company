@@ -1,0 +1,18 @@
+
+
+.section-load {
+    height: 100vh; width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 2em;
+}
+
+.section-load img{
+    width: 15rem;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: App-logo-spin infinite 5s linear;
+}

@@ -4,8 +4,12 @@
 
 /*Contenedor main*/
 .main-quickView {
-    height: 100dvh;
-    width: 100dvw;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Menu*/

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaShop } from 'react-icons/fa6';
 
 function Footer(){
     return(
@@ -23,10 +24,13 @@ function Footer(){
                 </section>
 
                 <section id="redes">
-                    <h2>Sigue Nuestras Redes</h2>
+                    <h2>Visítenos</h2>
                     <div style={{display: 'flex'}}>
                         <a href='#facebook' onClick={() => window.open("https://www.facebook.com/profile.php?id=61569565533751")}>
                         <FaFacebookSquare size={28} className='facebook-icon'/>                        
+                        </a>
+                        <a href='#googleBusiness' onClick={() => window.open('https://g.co/kgs/C3smwod')}>
+                            <FaShop size={28} className='google-icon'/>                        
                         </a>
                         <a href='#instagram' onClick={() => window.open('https://www.instagram.com/b.sites.company/')}>
                             <FaInstagram size={28} className='instagram-icon'/>                        

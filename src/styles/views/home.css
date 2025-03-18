@@ -37,6 +37,7 @@
       max-width: 1200px;
       margin: 0 auto;
       margin-bottom: 5%;
+      border-radius: 30px;
     }
 
     /* ------------------------------
@@ -44,7 +45,9 @@
     ------------------------------ */
     .hero {
       display: flex;
+      flex-direction: column-reverse;
       align-items: center;
+      text-align: center;
       justify-content: space-between;
       padding: 4rem 0;
       background: #287d7d;
@@ -57,21 +60,22 @@
 
     .hero .hero-text {
       flex: 1;
-      margin-right: 2rem;
+      margin-top: -3rem;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3.2rem;
+      margin-bottom: 0rem;
     }
     
     .hero h1 strong {
       font-family: "Pixelify Sans", sans-serif;
-      font-size: 3.2rem;
+      font-size: 4rem;
       font-weight: 100;
     }
 
     .hero p {
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
       white-space: nowrap;
     }
@@ -87,8 +91,7 @@
 
     .hero .hero-image img {
       width: 100%;
-      max-width: 500px;
-      height: auto;
+      max-width: 400px;
     }
 
     /* ------------------------------
@@ -529,8 +532,7 @@
     }
 
     .hero .hero-image img {
-      max-width: 20%;
-      margin-bottom: -5%;
+      max-width: 30%;
     }
 
     .services {

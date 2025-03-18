@@ -55,18 +55,6 @@ footer{
     align-items: center;
 }
 
-.facebook-icon, .instagram-icon{
-    transition: color .2s;
-}
-
-.facebook-icon:hover{
-    color: rgb(59, 89, 152);
-}
-
-.instagram-icon:hover{
-    color: rgb(238,42,123);
-}
-
 @media (min-width: 1367px) {
     
 }

@@ -51,6 +51,22 @@ body{
   transform: translateX(-5px);
 }
 
+.facebook-icon, .instagram-icon, .google-icon{
+  transition: color .2s;
+}
+
+.facebook-icon:hover{
+  color: rgb(59, 89, 152);
+}
+
+.google-icon:hover{
+  color: rgb(70, 116, 212);
+}
+
+.instagram-icon:hover{
+  color: rgb(238,42,123);
+}
+
 /* Tidio */
 
 #button-body:hover {
