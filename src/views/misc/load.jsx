@@ -1,5 +1,3 @@
-import { FaArrowLeft } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 //Styles
 import '../../styles/views/load.css';
 
