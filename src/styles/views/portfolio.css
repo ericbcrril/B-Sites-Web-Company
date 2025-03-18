@@ -29,14 +29,7 @@ body {
     text-align: center;
     margin: 2em 0 2em 0;
     background: #f9f9f9;
-    border: dashed #287d7d 2px;
-}
-
-.projects-description p, .projects-description strong {
-    width: 80%;
-    hyphens: auto;
-    margin: .5em;
-    color: #333;
+    border: dashed #287d7d 1px;
 }
 
 /* Contenedor de tarjetas */
@@ -71,8 +64,9 @@ body {
 
 /* Imagen de la tarjeta */
 .card img {
-    width: 100%;
-    height: 200px;
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -88,11 +82,15 @@ body {
 
 .card-content p {
     color: #666;
-    font-size: 14px;
+    font-size: 1em;
+    height: 50px;
 }
 
     /*Tablets Portrait*/
     @media (min-width: 451px) and (max-width: 1023px) and (min-height: 720px) {
+        body {
+            background-size: 50%;
+          }
     /* Contenedor de tarjetas */
     .project-container {
         max-width: 80vw;
@@ -103,7 +101,9 @@ body {
       /*Mobiles Portrait*/
     @media (max-width: 450px) {
        
-
+        body {
+            background-size: 50%;
+          }
         /* Contenedor de tarjetas */
         .project-container {
             max-width: 80vw;

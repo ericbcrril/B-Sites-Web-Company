@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
+import { FaCheck } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+
+//Styles
+import '../styles/views/home.css';
+
+//Components
 import Footer from "../components/misc/footer";
 import Navbar from "../components/misc/navbar";
-import { FaCheck } from "react-icons/fa6";
-import '../styles/views/home.css';
-//import { useNavigate } from "react-router-dom";
 
 function Home({ isMexico }) {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const IFW = ["2807211", "7922055", "7913078"];
   const img = IFW[Math.floor(Math.random() * IFW.length)];
 
@@ -126,7 +130,8 @@ function Home({ isMexico }) {
               Nosotros te ayudaremos a destacar de entre los demás, diseñando y
               desarrollando una web funcional para tu negocio.
             </p>
-            {/*<button onClick={ () => navigate('/Portafolio') }>Proyectos</button>*/}
+            <button onClick={ () => navigate('/Portafolio') } style={{margin: 5}}>Proyectos</button>
+            <button onClick={ () => window.open('https://g.co/kgs/fUfz9gh') } style={{margin: 5}}>Testimonios</button>
           </div>
         </motion.div>
       </motion.section>

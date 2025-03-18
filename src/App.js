@@ -1,9 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 // Vistas
+import View404 from "./views/misc/404";
+import LoadView from "./views/misc/load";
 import Home from "./views/home";
 import QuickView from "./views/quickView";
 
@@ -22,8 +24,17 @@ function AnimatedRoutes({ isMexico }) {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <Suspense fallback={<LoadView />} >
+      <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        <Route
+          path="*"
+          element={
+            <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+              <View404 />
+            </motion.div>
+          }
+        />
         <Route
           path="/"
           element={
@@ -70,6 +81,8 @@ function AnimatedRoutes({ isMexico }) {
         />
       </Routes>
     </AnimatePresence>
+    </Suspense>
+    
   );
 }
 

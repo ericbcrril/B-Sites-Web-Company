@@ -10,7 +10,7 @@ function Exit() {
 
         <motion.button 
             className="btn-back" 
-            onClick={ () =>  navigate(-1)}
+            onClick={ () =>  navigate('/')}
             initial={{ x: "-100%" }}
             whileInView={{ x: 0 }}
             >

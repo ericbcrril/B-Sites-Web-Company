@@ -1,8 +1,8 @@
-//
 import { useNavigate } from "react-router-dom";
 //Icons
 import { GrFormNextLink } from "react-icons/gr";
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaShop } from 'react-icons/fa6';
 //Styles
 import '../styles/views/quickView.css';
 
@@ -34,9 +34,13 @@ function QuickView() {
                                 <a href='#facebook' onClick={() => window.open("https://www.facebook.com/profile.php?id=61569565533751")}>
                                 <FaFacebookSquare size={28} className='facebook-icon'/>                        
                                 </a>
+                                <a href='#GoogleBusiness' onClick={() => window.open("https://www.facebook.com/profile.php?id=61569565533751")}>
+                                <FaShop size={28} className='google-icon'/>                        
+                                </a>
                                 <a href='#instagram' onClick={() => window.open('https://www.instagram.com/b.sites.company/')}>
                                     <FaInstagram size={28} className='instagram-icon'/>                        
                                 </a>
+                                <p>Redes</p>
                             </div>
             </section>
             

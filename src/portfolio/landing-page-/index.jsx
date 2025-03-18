@@ -565,7 +565,7 @@ footer {
             <br />
             <a
               style={{ whiteSpace: 'nowrap', fontSize: 'small', margin: '0 10px' }}
-              href="https://b-sites-company.netlify.app"
+              href="https://bsitescomp.com"
               target="_blank"
               rel="noopener noreferrer"
             >

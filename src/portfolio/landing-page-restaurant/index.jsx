@@ -422,7 +422,7 @@ function Index() {
                     <a style={{ textDecoration: 'none', fontSize: 'small', margin: '0 10px' }} href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">
                         Images Designed by Freepik
                     </a><br />
-                    <a style={{ whiteSpace: 'nowrap', fontSize: 'small', margin: '0 10px' }} href="https://b-sites-company.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <a style={{ whiteSpace: 'nowrap', fontSize: 'small', margin: '0 10px' }} href="https://bsitescomp.com" target="_blank" rel="noopener noreferrer">
                         &copy; Copyright 2025 Web Designed and Developed by B-Sites
                     </a>
                 </div>
