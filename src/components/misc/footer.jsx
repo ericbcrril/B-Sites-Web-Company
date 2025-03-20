@@ -20,7 +20,7 @@ function Footer(){
                 <section >
                     <h2>Contacto</h2>
                     <a href='https://wa.me/+523841177360'>+523841177360</a>
-                    <a href='mailto:bsitesmanagement@gmail.com'>bsitesmanagement@gmail.com</a>
+                    <a href='mailto:contacto@bsitescomp.com'>contacto@bsitescomp.com</a>
                 </section>
 
                 <section id="redes">

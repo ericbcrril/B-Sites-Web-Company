@@ -3,7 +3,7 @@ const sendEmail = (event) => {
   
     const userName = event.target.userName.value;
     const message = event.target.message.value;
-    const emailContact = "bsitesmanagement@gmail.com"; // Dirección de email de destino
+    const emailContact = "contacto@bsitescomp.com"; // Dirección de email de destino
   
     // Construimos el asunto y el cuerpo del correo
     const emailSubject = `Consulta de Proyecto`;
