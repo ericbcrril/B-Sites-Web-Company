@@ -72,8 +72,52 @@
   <!-- Verificación de dominio Meta -->
   <meta name="facebook-domain-verification" content="4jggzzr1ppohpdzo10wxnfnarjet2q" />
     
-  <!-- Modo de consentimiento Cookiebot -->
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e7a86cda-3c34-4c76-ae9d-d26a71378008" type="text/javascript" async></script>
+  <!-- Modo de consentimiento Axeptio -->
+  <script>
+
+// Define dataLayer y la función gtag.
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+ 
+// IMPORTANTE: NO COPIES NI PEGUES SIN MODIFICAR LA LISTA DE REGIONES
+
+// Define el consentimiento predeterminado de regiones concretas según tus requisitos
+
+gtag('consent', 'default', {
+
+  'ad_storage': 'denied',
+
+  'ad_user_data': 'denied',
+
+  'ad_personalization': 'denied',
+
+  'analytics_storage': 'denied',
+
+ 'regions':[<list of ISO 3166-2 region codes>]
+
+});
+
+// Define el consentimiento predeterminado de todas las demás regiones según tus requisitos
+
+gtag('consent', 'default', {
+
+  'ad_storage': 'denied',
+
+  'ad_user_data': 'denied',
+
+  'ad_personalization': 'denied',
+
+  'analytics_storage': 'denied'
+
+});
+
+ 
+</script>
+
+<!--Secuencia de comandos del banner aquí!--> 
 
   </head>
   <body >
