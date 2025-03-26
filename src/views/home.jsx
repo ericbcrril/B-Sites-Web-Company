@@ -122,11 +122,6 @@ function Home({ isMexico }) {
               aplicaciones y sitios web.
             </p>
             <p>
-              Nuestro equipo está compuesto por desarrolladores apasionados por
-              la tecnología y enfocados en ofrecer soluciones innovadoras y
-              eficientes al mejor precio.
-            </p>
-            <p>
               Nosotros te ayudaremos a destacar de entre los demás, diseñando y
               desarrollando una web funcional para tu negocio.
             </p>
