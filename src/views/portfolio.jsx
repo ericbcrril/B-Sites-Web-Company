@@ -92,7 +92,7 @@ function Portfolio({ isMexico }) {
             </div>
             <div class="project-container">
                 <div class="card">
-                    <img src="images/logos/portfolio/turis-bece-logo512.png" alt="Proyecto 5"/>
+                    <img src="https://turisticosbecerros.com/logo512.png" alt="Proyecto 5"/>
                     <div class="card-content">
                         <h3>Turísticos Becerros</h3>
                         <p>Renta de autobuses para turismo a toda la república, 📍Guadalajara, Jalisco.</p>
@@ -100,11 +100,27 @@ function Portfolio({ isMexico }) {
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/logos/portfolio/brujo-leo-logo512.png" alt="Proyecto 6"/>
+                    <img src="https://elitespecialsolutions.com/logo512.png" alt="Proyecto 6"/>
+                    <div class="card-content">
+                        <h3>Elite Special Solutions</h3>
+                        <p>Conectando empresas con talento de primer nivel, Nicaragua y América Latina.</p>
+                        <button onClick={ () => window.open('https://elitespecialsolutions.com') } class="btn">Visitar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://intext-estudio.netlify.app/logo512.png" alt="Proyecto 6"/>
+                    <div class="card-content">
+                        <h3>Intext Estudio</h3>
+                        <p>Remodelamos Tu Hogar. Para re-valorar tu patrimonio. Actual, único y a bajo costo.</p>
+                        <button onClick={ () => window.open('https://intext-estudio.netlify.app') } class="btn">Visitar</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://brujoleodantor.com/logo512.png" alt="Proyecto 6"/>
                     <div class="card-content">
                         <h3>Ougan Brujo Leo</h3>
                         <p>Trabajos espirituales, respaldados por resultados comprobados.</p>
-                        <button onClick={ () => window.open('https://brujoleodantor.netlify.app') } class="btn">Visitar</button>
+                        <button onClick={ () => window.open('https://brujoleodantor.com') } class="btn">Visitar</button>
                     </div>
                 </div>
             </div><br />
